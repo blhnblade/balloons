@@ -1,0 +1,229 @@
+.card-tour{
+    height: 31.25rem;
+    position: relative;
+    transition-property: all;
+    transition-duration: 1s;  
+    transition-timing-function: ease-out;
+    perspective: 70.75rem;
+    -moz-perspective: 70.75rem;
+}
+@media(max-width: 900px){
+    .card-tour{
+        height: auto;
+    }
+}
+
+.card-tour__side{
+    width: 100%;
+    height: 31.25rem;
+    transition-property: all;
+    transition-duration: 0.7s; 
+    color:white;
+    position: absolute;
+    border-radius: 0.1875rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    top: 0;
+    left: 0;
+    box-shadow: 0rem 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}
+@media(max-width: 900px){
+    .card-tour__side{
+        height: auto;
+        position: relative;
+    }
+}
+
+
+.card-tour__side_back{
+    background-image: linear-gradient(135deg, var(--color-1), var(--color-2));
+    transform: rotateY(-180deg);
+}
+@media(max-width: 900px){
+    .card-tour__side_back{
+        transform: rotateY(0deg);
+        padding: 3.125rem;
+        padding-top: 5rem;
+        clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%);
+        margin-top: -5rem;
+    }
+}
+
+.card-tour__side_front{   
+}
+@media(max-width: 900px){
+    .card-tour__side_front{
+        padding-bottom: 6.25rem;
+    }
+}
+
+.card-tour:hover .card-tour__side_front{
+    transform: rotateY(-180deg);
+}
+@media(max-width: 900px){
+    .card-tour:hover .card-tour__side_front{
+        transform: rotateY(0deg);
+    }
+}
+
+
+.card-tour:hover .card-tour__side_back{
+    transform: rotateY(-360deg);
+}
+@media(max-width: 900px){
+    .card-tour:hover .card-tour__side_back{
+        transform: rotateY(0deg);
+    }
+}
+
+
+
+.card-tour__img{
+    width: 100%;
+    height: 13.125rem;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: hard-light;
+    background-color: var(--color-2);
+    clip-path: polygon(0% 0%, 0% 90%, 100% 100%, 100% 0%);
+    margin-bottom: 3.7rem;
+}
+@media(max-width: 900px){
+    .card-tour__img{
+        height: 18.75rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+
+.card-tour__img_1{
+    background-image: url(../img/pict3.jpg);
+}
+
+.card-tour__img_2{
+    background-image: url(../img/pict1.jpg);
+}
+
+.card-tour__img_3{
+    background-image: url(../img/pict2.jpg);
+}
+
+.card-tour__title{
+    font-size: 1.75rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    text-align: right;
+    position: absolute;
+    top: 10.6875rem;
+    right: 0rem;
+}
+@media(max-width: 900px){
+    .card-tour__title{
+        top: 16.6875rem;
+        font-size: 2.375rem;
+    }
+}
+
+.card-tour__span{
+    background-image: linear-gradient(90deg, #C3956A 3.65%, #A24F03 100%);
+    padding: 0.625rem 1.25rem 0.1875rem;   
+}
+
+.card-tour__span_1{
+
+}
+
+.card-tour__span_2{
+    position: absolute;
+    top: 2.15rem;
+    right: 0;
+    padding-bottom: 0.625rem;
+    padding-top: 0.1875rem;
+}
+@media(max-width: 900px){
+    .card-tour__span_2{
+        top: 2.75rem;
+    }
+}
+
+.card-tour__descr ul{
+    list-style-type: none;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+@media(max-width: 900px){
+    .card-tour__descr ul{
+        width: 75%;
+    }
+}
+
+
+.card-tour__descr ul li{
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    display: inline-block;
+    border-bottom: 0.125rem solid #777777;
+    font-weight: 700;
+    color: #777777;
+}
+@media(max-width: 1240px){
+    .card-tour__descr ul li{
+        font-size: 0.9375rem
+    }
+}
+@media(max-width: 900px){
+    .card-tour__descr ul li{
+        font-size: 1.4rem;
+    }
+}
+
+
+.card-tour__descr ul li:not(:last-child){
+    margin-bottom: 1.1875rem;
+}
+
+
+
+.card-tour__backside-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+@media(max-width: 900px){
+    .card-tour__backside-box{
+        position: relative;
+        top: 0%;
+        left: 0%;
+        transform: translate(0%, 0%);
+        text-align: center;
+    }
+}
+
+.card-tour__text{
+    text-align: center;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.125rem;
+    color: #ffff;
+}
+
+
+.card-tour__text_1{
+    font-weight: 300;
+    font-size: 1rem;
+    
+}
+
+.card-tour__text_2{
+    font-weight: 500;
+    font-size: 3.75rem;
+    letter-spacing: 0.125rem;
+}
+
+.section-tour__btn{
+    
+}

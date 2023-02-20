@@ -1,0 +1,198 @@
+ .section-book{
+    padding: 2.5rem;
+    background-image: var(--color-6-gradient);
+}
+
+.book{
+    height: 31.25rem;
+    background-image: linear-gradient(104deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 60%, rgba(161,79,3,0.8) 60.09%, rgba(161,79,3,0.8) 100%), url(../img/bg-form.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.3125rem;
+    box-shadow: 0rem 0.25rem 0.25rem rgb(0 0 0 / 30%);
+    overflow: hidden;
+}
+@media(max-width: 1240px){
+    .book{
+        background-image: linear-gradient(104deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8) 63%, rgba(161,79,3,0.8) 60.09%, rgba(161,79,3,0.8) 100%), url(../img/bg-form.jpg);
+    }
+}
+@media(max-width: 900px){
+    .book{
+        background-image: linear-gradient(104deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.8)100%), url(../img/bg-form.jpg);
+    }
+}
+
+
+.form{
+    width: 70%;
+    padding-top: 3.125rem;
+    padding-left: 3.125rem;
+}
+@media(max-width: 900px){
+    .form{
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+
+.form__group:not(:last-child){
+    margin-bottom: 1.25rem;
+}
+@media(max-width:1240px){
+    .form__group:not(:last-child){
+        margin-bottom: 0;
+    }
+}
+
+
+
+.form__group:nth-child(4){
+    margin-bottom: 2.5rem;
+}
+@media(max-width: 1240px){
+    .form__group:nth-child(4){
+        margin-bottom: 1.5625rem;
+    }
+}
+/*    :nth-child(3)    */
+@media(max-width: 900px){
+    .form__group:nth-child(3){
+        margin-bottom: 0.7rem;
+    }
+}
+
+
+
+
+/*          h2         */
+@media(max-width: 900px){
+    .form__h2{
+        font-size: 2rem;
+        letter-spacing: 0.325rem;
+    }
+    
+}
+
+
+.form__input{
+    font-size: 1rem;
+    color: black;
+    letter-spacing: 0.125rem;
+    font-weight: 400;
+    padding: 1.125rem 0rem 1.125rem 1.375rem;
+    background-color: white;
+    border-style: none;
+    border-bottom: 0.125rem solid transparent;
+    border-radius: 0.18755rem;
+    width: 75%;
+}
+@media(max-width: 900px){
+    .form__input{
+        width: 90%;
+        box-shadow: 0rem 0.25rem 0.25rem rgb(0 0 0 / 30%);
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.form__input:focus{
+    outline-style: none;
+    box-shadow: 0rem 0.25rem 0.25rem rgb(0 0 0 / 30%);
+}
+
+.form__input:focus:invalid{
+    border-bottom: 0.125rem solid #D76363;
+}
+
+.form__input:focus:valid{
+    border-bottom: 0.125rem solid #66D763;
+}
+
+
+.form__input:placeholder-shown + .form__label{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(-0.4375rem);
+}
+
+
+.form__label{
+    display:block;
+    font-size: 1rem;
+    letter-spacing: 0.125rem;
+    color: var(--color-5);
+    margin-top: 0.625rem;
+    margin-left: 0.9375rem;
+    transition-property: all;
+    transition-duration: 0.7s;
+}
+@media(max-width: 900px){
+    .form__label{
+        margin-left: 1.475rem;
+    }
+}
+
+
+.form__group_radio{
+    display: inline-block;
+}
+@media(max-width: 1240px){
+    .form__group_radio{
+        display: block;
+    }
+    .form__group_radio:not(:last-child){
+        margin-bottom: 1.25rem;
+    }
+}
+
+
+.form__group_radio:not(:last-child){
+    margin-right: 2rem;
+}
+
+
+.form__label-radio{
+    cursor: pointer;
+    position: relative;
+    padding-left: 2.5rem;
+}
+
+.form__button-radio{
+    display: block;
+    height: 1.875rem;
+    width: 1.875rem;
+    border-radius: 50%;
+    border: 0.3125rem solid var(--color-2);
+    position: absolute;
+    left: 0;
+    top: -0.25rem;
+}
+
+.form__button-radio::after{
+    content:"";
+    display: block;
+    height: 0.8375rem;
+    width: 0.8375rem;
+    border-radius: 50%;
+    background-color: var(--color-2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition-property: all;
+    transition-duration: .2s;
+}
+
+.form__input-radio:checked ~ .form__label-radio .form__button-radio::after{
+    opacity: 1;
+}
+
+
+.form__input-radio{
+    display:none;
+}
+
